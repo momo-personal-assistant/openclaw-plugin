@@ -1,0 +1,17 @@
+{
+  "name": "@momo-memory/momo-memory",
+  "version": "0.1.5",
+  "description": "Momo memory plugin for OpenClaw — cloud-backed team memory with auto-indexing from Gmail, GitHub, Notion, Slack, Discord",
+  "main": "index.ts",
+  "openclaw": {
+    "extensions": ["./index.ts"]
+  },
+  "keywords": ["openclaw", "memory", "momo", "decisions", "team"],
+  "author": "Momo",
+  "license": "MIT",
+  "homepage": "https://usemomo.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/momo/openclaw-momo-memory"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "momo-memory",
+  "kind": "memory",
+  "uiHints": {
+    "apiKey": {
+      "label": "Momo API Key",
+      "sensitive": true,
+      "placeholder": "momo_...",
+      "help": "Get your API key at app.usemomo.com → Settings → API Keys"
+    },
+    "apiUrl": {
+      "label": "Momo API URL",
+      "placeholder": "https://app.usemomo.com",
+      "advanced": true,
+      "help": "Override for self-hosted Momo instances"
+    },
+    "autoCapture": {
+      "label": "Auto-Capture",
+      "help": "Automatically extract decisions from conversations and store them in Momo"
+    },
+    "autoRecall": {
+      "label": "Auto-Recall",
+      "help": "Automatically inject relevant memories into context before each response"
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": { "type": "string" },
+      "apiUrl": { "type": "string" },
+      "autoCapture": { "type": "boolean" },
+      "autoRecall": { "type": "boolean" }
+    },
+    "required": []
+  }
+}

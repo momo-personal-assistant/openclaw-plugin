@@ -4,6 +4,30 @@ Cloud-backed team memory for [OpenClaw](https://openclaw.ai). Connects your Gmai
 
 > **Momo** extracts decisions from your team's tools, indexes them with embeddings + graph relationships, and makes them available through natural language search. This plugin brings that memory into OpenClaw.
 
+## Why Momo vs OpenClaw's Built-in Memory
+
+| | OpenClaw Today | With Momo |
+|---|---|---|
+| **Storage** | Local-only (markdown, session transcripts) | Cloud-backed, encrypted, persistent |
+| **Data Sources** | Conversation-derived memories only | Auto-indexed Gmail/GitHub/Notion/Slack/Discord |
+| **Extraction** | Rule-based capture (regex triggers) | AI-powered decision extraction pipeline |
+| **Sharing** | Single-user, single-device | Team-shared decision context |
+| **Intelligence** | No semantic understanding | Structured decisions (rationale, confidence, entities) |
+
+### What Momo Solves
+
+1. **memory.md doesn't auto-populate** — Momo's `agent_end` hook automatically extracts decisions from every conversation. No trigger words needed.
+
+2. **No clear criteria for long-term memory** — Momo uses 10 explicit decision types (approval, commitment, selection, etc.) with confidence scoring. Structured data, not freeform markdown.
+
+3. **No persistent log or daily summaries** — Every decision is permanently stored with embeddings and graph relationships. The `momo_summary` tool generates period-based summaries (today/week/month).
+
+4. **No automatic categorization** — The extraction pipeline automatically identifies people, companies, projects, and links them via graph relationships. Ask "who have I been working with?" and get structured answers.
+
+5. **No way to view or query organized data** — Search semantically with `momo_search`, get formatted context with `momo_context`, or browse the full graph in Momo's web UI.
+
+6. **External tools can't access memory** — Momo's API endpoints work with any tool, not just OpenClaw. Notion, Slack, and other integrations can read and write to the same memory.
+
 ## Quick Start
 
 ```bash

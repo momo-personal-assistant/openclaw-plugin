@@ -225,23 +225,19 @@ All discovered nodes are assembled into a context package for the LLM:
 
 ## Step 6: Encryption & Security
 
-### Three Encryption States
+### Client-Side Encryption (Vault)
 
-| State | How | When |
-|-------|-----|------|
-| **Client-side (Vault)** | AES-256-GCM, key derived from user's passphrase | Default for new data |
-| **Server-side (Legacy)** | AES-256-GCM, key on server | Older data |
-| **Plaintext** | No encryption | Search-indexed fields (summary, type) |
+All sensitive data is encrypted client-side using **AES-256-GCM** before it leaves your device. The encryption key is derived from a passphrase that only you know — Momo's servers never see the plaintext.
 
-### What's Encrypted vs Plaintext
-
-- **Encrypted:** Title, full context, involved persons, related entities (sensitive)
-- **Plaintext:** Summary, decision type, confidence, source (needed for search and filtering)
+| Data | Encryption |
+|------|-----------|
+| Title, full context, involved persons, related entities | **Encrypted** (AES-256-GCM, client-side) |
+| Summary, decision type, confidence, source | **Plaintext** (needed for search and filtering) |
 
 ### Team Isolation
 
-- Personal data: Row Level Security (only you see your data)
-- Team data: Must be explicitly marked as shared
+- Personal data is isolated per user — only you see your data
+- Team data must be explicitly marked as shared
 - Default sharing by source:
   - **Gmail:** Private (personal emails)
   - **GitHub/Notion/Slack/Discord:** Shared (team content)

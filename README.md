@@ -1,6 +1,6 @@
 # Momo Memory — OpenClaw Plugin
 
-Cloud-backed team memory for [OpenClaw](https://openclaw.dev). Connects your Gmail, GitHub, Notion, Slack, and Discord decisions into a searchable memory layer that any AI agent can query.
+Cloud-backed team memory for [OpenClaw](https://openclaw.ai). Connects your Gmail, GitHub, Notion, Slack, and Discord decisions into a searchable memory layer that any AI agent can query.
 
 > **Momo** extracts decisions from your team's tools, indexes them with embeddings + graph relationships, and makes them available through natural language search. This plugin brings that memory into OpenClaw.
 
@@ -121,10 +121,83 @@ openclaw momo tools
 
 ## Dynamic Integration Tools
 
-Beyond the 7 built-in tools, the plugin automatically discovers and registers tools based on your connected integrations. For example, if you've connected Gmail and Slack in Momo, additional tools like `gmail_send_email` or `slack_post_message` become available to the agent.
+Beyond the 7 built-in tools, the plugin automatically discovers and registers tools based on your connected integrations. Tools only appear when the corresponding integration is connected in Momo.
 
 Run `openclaw momo tools` to see what's available for your account.
 
+### Gmail (6 tools)
+
+| Tool | Description |
+|------|-------------|
+| `gmail_list_emails` | List emails from inbox with search and filtering |
+| `gmail_get_email` | Get full content of a specific email |
+| `gmail_get_thread` | Get all messages in an email thread |
+| `gmail_search_emails` | Search emails using Gmail's advanced search syntax |
+| `gmail_send_email` | Send a new email |
+| `gmail_reply_to_email` | Reply to an existing email thread |
+
+### Slack (8 tools)
+
+| Tool | Description |
+|------|-------------|
+| `slack_get_my_identity` | Get current user's Slack identity |
+| `slack_list_channels` | List channels user has access to |
+| `slack_get_channel_messages` | Get recent messages from a channel |
+| `slack_get_thread` | Get all messages in a thread |
+| `slack_search_messages` | Search messages across channels |
+| `slack_get_my_mentions` | Find messages where you are @mentioned |
+| `slack_send_message` | Send a message to a channel |
+| `slack_reply_to_thread` | Reply to a thread |
+
+### GitHub (7 tools)
+
+| Tool | Description |
+|------|-------------|
+| `github_list_repos` | List user's repositories |
+| `github_list_connected_repos` | List repos connected to Momo |
+| `github_list_commits` | List recent commits for a repo |
+| `github_get_commit` | Get commit details including files changed |
+| `github_list_prs` | List pull requests |
+| `github_get_pr` | Get details of a specific PR |
+| `github_list_issues` | List issues for a repo |
+
+### Notion (7 tools)
+
+| Tool | Description |
+|------|-------------|
+| `notion_search_pages` | Search for pages in workspace |
+| `notion_get_page` | Get full content of a page as markdown |
+| `notion_list_databases` | List databases in workspace |
+| `notion_query_database` | Query a database to get entries/rows |
+| `notion_create_page` | Create a new sub-page under an existing page |
+| `notion_append_content` | Append content to an existing page |
+| `notion_add_database_entry` | Add a new entry to a database |
+
+### Linear (6 tools)
+
+| Tool | Description |
+|------|-------------|
+| `linear_list_teams` | List all teams in workspace |
+| `linear_list_projects` | List projects in workspace |
+| `linear_list_issues` | List issues with optional filters |
+| `linear_get_issue` | Get details of a specific issue (e.g. `ENG-123`) |
+| `linear_create_issue` | Create a new issue |
+| `linear_search_issues` | Search issues by keyword |
+
+### Discord (8 tools)
+
+| Tool | Description |
+|------|-------------|
+| `discord_get_my_identity` | Get current user's Discord identity |
+| `discord_list_servers` | List servers (guilds) user has access to |
+| `discord_list_channels` | List text channels in a server |
+| `discord_get_channel_messages` | Get recent messages from a channel |
+| `discord_get_thread` | Get all messages in a thread |
+| `discord_search_messages` | Search messages containing specific text |
+| `discord_get_my_mentions` | Find messages where you are @mentioned |
+| `discord_send_message` | Send a message to a channel |
+
+<!--
 ## Self-Hosted
 
 If you're running a self-hosted Momo instance, set the `apiUrl` config option:
@@ -138,6 +211,7 @@ Or via environment variable:
 ```bash
 export MOMO_API_URL=https://your-momo.example.com
 ```
+-->
 
 ## How Memory Works
 
@@ -145,9 +219,9 @@ See [HOW_MEMORY_WORKS.md](./HOW_MEMORY_WORKS.md) for a detailed explanation of h
 
 ## Links
 
-- [Momo App](https://usemomo.com) — Sign up and manage your team
+- [Momo App](https://app.usemomo.com/setup) — Sign up and manage your team
 - [API Keys](https://app.usemomo.com) — Settings → API Keys
-- [OpenClaw](https://openclaw.dev) — The agent framework
+- [OpenClaw](https://openclaw.ai) — The agent framework
 
 ## License
 

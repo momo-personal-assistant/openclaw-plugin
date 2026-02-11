@@ -12,6 +12,6 @@
   "homepage": "https://usemomo.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/momo/openclaw-momo-memory"
+    "url": "https://github.com/momo-personal-assistant/openclaw-plugin"
   }
 }

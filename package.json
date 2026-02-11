@@ -1,6 +1,6 @@
 {
   "name": "@momo-memory/momo-memory",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Momo memory plugin for OpenClaw — cloud-backed team memory with auto-indexing from Gmail, GitHub, Notion, Slack, Discord",
   "main": "index.ts",
   "openclaw": {

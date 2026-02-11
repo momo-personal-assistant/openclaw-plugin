@@ -227,7 +227,7 @@ All discovered nodes are assembled into a context package for the LLM:
 
 ### Client-Side Encryption (Vault)
 
-All sensitive data is encrypted client-side using **AES-256-GCM** before it leaves your device. The encryption key is derived from a passphrase that only you know — Momo's servers never see the plaintext.
+All sensitive data is encrypted client-side using **AES-256-GCM** before it leaves your device. The encryption key is derived from a passphrase that only you know — Momo's servers never see your full content.
 
 | Data | Encryption |
 |------|-----------|
